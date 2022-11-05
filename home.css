@@ -1,0 +1,70 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.header-wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #1a1b1c;
+    height: 40px;
+    color: aliceblue;
+    padding: 10px 20px;
+}
+.nav-sidebar{
+    display: none;
+}
+.header-item{
+    padding: 10px 10px 0 0;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: row;  
+    cursor: pointer;
+    justify-content: flex-start;
+    align-items: initial;
+}
+.nav-search{
+    display: flex;
+    flex-direction: row;
+    justify-content: normal;
+    align-items: center;
+}
+.search-field{
+    padding: 5px;
+    padding-right: 25px;
+    border: 1px solid #e6e8e6;
+    border-radius: 4px;
+    height: 18px;
+}
+.search-btn{
+    border: none;
+    background: transparent;
+    position: relative;
+    right: 30px;
+    cursor: pointer;
+}
+/* Style the search field */
+  
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+    .header-wrapper{
+        margin-left: 20vw;
+    }
+    .nav-menu {
+        display: none;
+    }
+    .nav-sidebar{
+        display: block;
+    }
+    .wrapper .sidebar{
+        background: rgb(5, 68, 104);
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20%;
+        height: 100%;
+        padding: 20px 0;
+        transition: all 0.5s ease;
+    }
+  }
