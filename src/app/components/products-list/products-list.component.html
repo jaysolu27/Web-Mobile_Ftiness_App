@@ -1,0 +1,15 @@
+<div class="product-wrap">
+<div class="top"><span>Our Equipments</span>
+</div>
+<div class="product-container">
+
+    <div class="product-card" *ngFor="let product of products;let i = index" (click)="navigateToDetails(product)">
+        <img src={{product.images[0]}}>
+        <div class="text">
+            <h1> {{product.productName}}</h1>
+            <h3 class="product-brief">Brand: {{product.brand}}</h3>
+            <h3 class="product-brief">{{product.price}}</h3>
+        </div>
+    </div>
+</div>
+</div>

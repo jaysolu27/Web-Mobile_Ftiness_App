@@ -1,0 +1,101 @@
+[
+    {
+        "productId": "YM1",
+        "productName": "Yoga Mat",
+        "productDescription": "Yoga Mat - Size: 68inch x 24inch x 1/4 inch.",
+        "price": "€20.00",
+        "color": "Blue",
+        "brand": "STRAUSS",
+        "productWeight": "840 Grams",
+        "images": ["../../assets/yoga_mat/ym.jpg", "../../assets/yoga_mat/ym1.jpg",
+        "../../assets/yoga_mat/ym2.jpg"],
+        "video": "../../assets/yoga_mat/ymVideo.mp4"
+    },
+    {
+        "productId": "BB2",
+        "productName": "Barbell",
+        "productDescription": "LxWxH 125 x 5 x 5 Centimeters",
+        "price": "€30.00",
+        "brand": "Konark",
+        "productWeight": "5KG",
+        "images": ["../../assets/barbell/bb1.jpg","../../assets/barbell/bb.jpg","../../assets/barbell/bb2.jpg",
+        "../../assets/barbell/bb3.jpg"],
+        "video": "../../assets/barbell/bbVideo.mp4"
+    },
+    {
+        "productId": "DB3",
+        "productName": "Dumbell",
+        "productDescription": "31.5L x 13.7W Centimeters",
+        "price": "€10.00",
+        "color": "Black",
+        "brand": "Amazon Basics",
+        "productWeight": "10260 Grams",
+        "images": ["../../assets/dumbell/db.jpg","../../assets/dumbell/db1.jpg",
+        "../../assets/dumbell/db2.jpg"],
+        "video": "../../assets/dumbell/dbVideo.mp4"
+    },
+    {
+        "productId": "GB4",
+        "productName": "Gym Bag",
+        "productDescription": "10 x 8 x 5 cm",
+        "price": "€10.00",
+        "color": "Black",
+        "brand": "GMBG",
+        "productWeight": "150 Grams",
+        "images": ["../../assets/gym_bag/gym_bag.jpg", "../../assets/gym_bag/gym_bag1.jpg",
+        "../../assets/gym_bag/gym_bag2.jpg", "../../assets/gym_bag/gym_bag3.jpg"]
+    },
+    {
+        "productId": "KB5",
+        "productName": "Kettle bell",
+        "productDescription": "German Designed Adjustable Weights 5 lbs to 20 lbs, For Men & Women, 20 lbs - Black & Orange LxWxH    23 x 20.6 x 29 Centimeters",
+        "price": "€40.00",
+        "brand": "Flexnest",
+        "productWeight": "9 Kilograms",
+        "images": ["../../assets/kettle_bell/kb1.jpg","../../assets/kettle_bell/kb2.jpg",
+        "../../assets/kettle_bell/kb3.jpg", "../../assets/kettle_bell/kb4.jpg"],
+        "video": "../../assets/kettle_bell/kbVideo.mp4"
+    },
+    {
+        "productId": "RB6",
+        "productName": "Resistance Band",
+        "productDescription": "5 different colored bands - Yellow, Blue, Red, Green and Black band; use them alone or combine any of them to increase intensity; combined maximum resistance of 100 lbs.",
+        "price": "€45.00",
+        "brand": "Fashnex",
+        "productWeight": "100 lbs",
+        "images": ["../../assets/resistance_band/RB1.jpg","../../assets/resistance_band/RB2.jpg",
+        "../../assets/resistance_band/RB3.jpg", "../../assets/resistance_band/RB4.jpg"],
+        "video": "../../assets/resistance_band/RBVideo.mp4"
+    },
+    {
+        "productId": "RO7",
+        "productName": "Rope",
+        "productDescription": "1.5 INCH Thick/Small Length 20 Feet",
+        "price": "€60.00",
+        "color": "Black",
+        "brand": "ESSKAY UTTAM",
+        "productWeight": "4 Kilograms",
+        "images": ["../../assets/rope/rope1.jpg","../../assets/rope/rope2.jpg"],
+        "video": "../../assets/rope/ropeVideo.mp4"
+    },
+    {
+        "productId": "WP8",
+        "productName": "Weight Plates",
+        "productDescription": "LxWxH 25.4 x 12.7 x 7.6 Centimeters",
+        "price": "€20.00",
+        "color": "Black",
+        "brand": "FitBox Sports",
+        "productWeight": "20000 Grams",
+        "images": ["../../assets/weight_plates/wp1.jpg", "../../assets/weight_plates/wp2.jpg"]
+    },
+    {
+        "productId": "BB9",
+        "productName": "Bottle",
+        "productDescription": "LxWxH 25.4 x 12.7 x 7.6 Centimeters",
+        "price": "€10.00",
+        "color": "Black",
+        "brand": "Fashnex",
+        "productWeight": "200 Grams",
+        "images": ["../../assets/bottle/bottle1.webp", "../../assets/bottle/bottle2.webp"]
+    }
+]
