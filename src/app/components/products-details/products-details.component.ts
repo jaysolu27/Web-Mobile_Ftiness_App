@@ -1,5 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from 'src/app/constants';
 
 @Component({
@@ -13,15 +14,27 @@ export class ProductsDetailsComponent implements OnInit {
   showForm: boolean = true;
   productSpaceLargeData;
   prodVideoLargeData;
-
+  reserveForm: FormGroup;
+  submitted = false;
   @ViewChild('prodVideo',{ static: true }) prodVideo: ElementRef; 
-  constructor(private route: ActivatedRoute) { }
+
+  constructor(private route: ActivatedRoute, private fb: FormBuilder, private router: Router) { }
 
   ngOnInit() {
     this.productDetails = [];
     this.productDetails.push(JSON.parse(this.route.snapshot.params.productData));
+    this.reserveForm = this.fb.group({
+      firstName: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
+      lastName: ['', [Validators.required]],
+      mobileNo: ['', [Validators.required, Validators.pattern("[0-9 ]{10}")]],
+      });
+
   }
 
+  get reserveFormControl() {
+    return this.reserveForm.controls;
+  }
   changeImage(img){
     this.prodVideoLargeData = '';
     this.prodVideo.nativeElement.pause();
@@ -37,7 +50,11 @@ export class ProductsDetailsComponent implements OnInit {
     this.showModal=!this.showModal;
   }
 
-  submit(){
+  onSubmit(){
     this.showForm = false;
+    setTimeout(()=>{                          
+      this.showModal = false;
+      this.router.navigate(['./home']);
+  }, 1500);
   }
 }

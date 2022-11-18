@@ -56,42 +56,74 @@
                 <h3 class="modal-title">Reserve Item</h3>
                 <a class="close" (click)="openModal()">&times;</a>
             </div>
-            <form class="reserve-item-form" #reserveForm="ngForm" (ngSubmit)="onClickSubmit(userName.value)">
+            <form class="reserve-item-form" [formGroup]="reserveForm" (ngSubmit)="onSubmit()">
                 <div class="form-container">
-                    <div class="reserve-item-field">Fisrt Name <span class="reqClass">*</span>:
-                        <input class="reserve-field" type="text" name="firstName" placeholder="Enter First Name..."
-                            ngModel required>
+                    <div class="reserve-item-field">
+                        <label><strong>Fisrt Name <span class="reqClass"> *</span> :</strong></label><br>
+                        <input class="reserve-field" type="text" formControlName="firstName" name="firstName"
+                            placeholder="Enter First Name..." required>
+                        <span class="text-danger"
+                            *ngIf="(reserveFormControl.firstName.touched || reserveFormControl.firstName.submitted) 
+                            && reserveFormControl.firstName.errors?.required">
+                            First Name is required.
+                        </span>
                     </div>
-                    <div class="reserve-item-field">Last Name <span class="reqClass">*</span>:
-                        <input class="reserve-field" type="text" name="lastName" placeholder="Enter Last Name..."
-                            ngModel required>
+                    <div class="reserve-item-field">
+                        <label><strong>Last Name <span class="reqClass"> *</span> :</strong></label><br>
+                        <input class="reserve-field" type="text" formControlName="lastName" name="lastName"
+                            placeholder="Enter Last Name..." required>
+                        <span class="text-danger"
+                            *ngIf="(reserveFormControl.lastName.touched || reserveFormControl.lastName.submitted)
+                             && reserveFormControl.lastName.errors?.required">
+                            Last Name is required.
+                        </span>
                     </div>
-                    <div class="reserve-item-field">Email - ID <span class="reqClass">*</span>:
-                        <input class="reserve-field" type="email" name="usermail" placeholder="Enter email..." ngModel
-                            required>
+                    <div class="reserve-item-field">
+                        <label><strong>Email - ID <span class="reqClass"> *</span> :</strong></label><br>
+                        <input class="reserve-field" type="email" formControlName="email" name="usermail"
+                            placeholder="Enter email..." required>
+                        <span class="text-danger"
+                            *ngIf="(reserveFormControl.email.touched || reserveFormControl.email.submitted) 
+                            && reserveFormControl.email.errors?.required">
+                            Email is required.
+                        </span>
+                        <span class="text-danger"
+                            *ngIf="(reserveFormControl.email.touched && reserveFormControl.email.invalid)">
+                            Email is invalid.
+                        </span>
                     </div>
-                    <div class="reserve-item-field">Mobile No <span class="reqClass">*</span>:
-                        <input class="reserve-field" type="text" name="usercontact"
-                            placeholder="Enter contact details ..." ngModel required>
+                    <div class="reserve-item-field">
+                        <label><strong>Mobile No <span class="reqClass"> *</span> :</strong></label><br>
+                        <input class="reserve-field" type="text" formControlName="mobileNo" name="usercontact"
+                            placeholder="Enter contact details ..." required>
+                            <span class="text-danger"
+                            *ngIf="(reserveFormControl.mobileNo.touched || reserveFormControl.email.submitted) 
+                            && reserveFormControl.mobileNo.errors?.required && !reserveFormControl.mobileNo.dirty">
+                            Mobile Number is required.
+                        </span>
+                        <span class="text-danger"
+                            *ngIf="(reserveFormControl.mobileNo.touched && reserveFormControl.mobileNo.invalid) && reserveFormControl.mobileNo.dirty">
+                            Mobile Number is invalid.
+                        </span>
                     </div>
-                    <div class="reserve-item-field">Product Quantity:
-                        <input type="number" value="1" min="1" class="product-count">
+                    <div class="reserve-item-field"><label><strong>Product Quantity:</strong></label>
+                        <input type="number" value="1" min="1" class="product-count" >
                     </div>
                 </div>
                 <br />
                 <br />
                 <div>
-                    <input class="submit-btn" (click)="submit()" type="submit" value="Reserve Now"
-                        [disabled]="!reserveForm.valid">
+                    <input class="submit-btn" type="submit" value="Reserve Now"
+                    [disabled]="reserveForm.invalid">
                 </div>
             </form>
         </div>
         <div *ngIf="!showForm">
             <div class="succ-message">
                 <i class="fa fa-check-square-o"></i><br>
-                <span>Item/s Reserved Successfully!!!</span>
+                <span>Item/s Reserved Successfully!!!{{reserveFormControl.email.submitted}}</span>
             </div>
-            </div>
+        </div>
     </div>
 
 </div>

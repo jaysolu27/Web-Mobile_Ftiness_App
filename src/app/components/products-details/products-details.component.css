@@ -84,8 +84,10 @@
     /* Stay in place */
     z-index: 1;
     /* Sit on top */
-    padding-top: 100px;
+    /* padding-top: 100px; */
     /* Location of the box */
+    display: flex;
+    justify-content: center;
     left: 0;
     top: 0;
     width: 100%;
@@ -107,14 +109,15 @@
     padding: 20px;
     border: 1px solid #888;
     width: 50%;
+    border-radius: 4px;
 }
 
 .reserve-item-field {
-    padding: 20px;
+    padding: 10px;
 }
 
 input[type="text"], input[type="email"] {
-    width: 80%;
+    width: 96%;
     border: none;
     background: transparent;
     border: 1px solid grey;
@@ -177,6 +180,10 @@ input[type="text"], input[type="email"] :focus-visible{
 }
 .reqClass{
     font-size: 12px;
+    color: #e32;
+}
+.text-danger{
+    display: block;
     color: #e32;
 }
 /* -----------new layout----------- */

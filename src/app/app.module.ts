@@ -8,7 +8,7 @@ import { AppRoutingModule } from './routing/route.module';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductsListComponent } from './components/products-list/products-list.component';
 import { ProductsDetailsComponent } from './components/products-details/products-details.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
@@ -25,7 +25,8 @@ import { FooterComponent } from './components/footer/footer.component';
     AppRoutingModule,
     CommonModule,
     HttpClientModule, 
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
