@@ -10,6 +10,7 @@ import { IProduct } from 'src/app/constants';
 export class ProductsDetailsComponent implements OnInit {
   productDetails: IProduct[];
   showModal: boolean = false;
+  showForm: boolean = true;
   productSpaceLargeData;
   prodVideoLargeData;
 
@@ -34,5 +35,9 @@ export class ProductsDetailsComponent implements OnInit {
   
   openModal(){
     this.showModal=!this.showModal;
+  }
+
+  submit(){
+    this.showForm = false;
   }
 }

@@ -14,8 +14,7 @@
                         <img src={{img}} class="prod-images prod-small-img">
                     </div>
                     <div *ngIf="product.video" (click)="changeVideo(product.video)">
-                        <video #prodVideo controls="false" preload="auto"
-                            class="product-video" controls>
+                        <video #prodVideo controls="false" preload="auto" class="product-video" controls>
                             <source src={{product.video}}>
                         </video>
                     </div>
@@ -44,4 +43,55 @@
             </div>
         </div>
     </div>
+</div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal" *ngIf="showModal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div *ngIf="showForm">
+            <div class="modal-header">
+                <h3 class="modal-title">Reserve Item</h3>
+                <a class="close" (click)="openModal()">&times;</a>
+            </div>
+            <form class="reserve-item-form" #reserveForm="ngForm" (ngSubmit)="onClickSubmit(userName.value)">
+                <div class="form-container">
+                    <div class="reserve-item-field">Fisrt Name <span class="reqClass">*</span>:
+                        <input class="reserve-field" type="text" name="firstName" placeholder="Enter First Name..."
+                            ngModel required>
+                    </div>
+                    <div class="reserve-item-field">Last Name <span class="reqClass">*</span>:
+                        <input class="reserve-field" type="text" name="lastName" placeholder="Enter Last Name..."
+                            ngModel required>
+                    </div>
+                    <div class="reserve-item-field">Email - ID <span class="reqClass">*</span>:
+                        <input class="reserve-field" type="email" name="usermail" placeholder="Enter email..." ngModel
+                            required>
+                    </div>
+                    <div class="reserve-item-field">Mobile No <span class="reqClass">*</span>:
+                        <input class="reserve-field" type="text" name="usercontact"
+                            placeholder="Enter contact details ..." ngModel required>
+                    </div>
+                    <div class="reserve-item-field">Product Quantity:
+                        <input type="number" value="1" min="1" class="product-count">
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div>
+                    <input class="submit-btn" (click)="submit()" type="submit" value="Reserve Now"
+                        [disabled]="!reserveForm.valid">
+                </div>
+            </form>
+        </div>
+        <div *ngIf="!showForm">
+            <div class="succ-message">
+                <i class="fa fa-check-square-o"></i><br>
+                <span>Item/s Reserved Successfully!!!</span>
+            </div>
+            </div>
+    </div>
+
 </div>
