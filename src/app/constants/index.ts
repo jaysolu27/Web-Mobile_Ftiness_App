@@ -2,7 +2,8 @@
 export interface IProduct{
     productId : string;
     productName : string;
-    prodDescription ?: string;
+    productSpecification ?: string;
+    prodDescription?: string;
     price ?: string;
     color ?: string;
     brand ?: string;

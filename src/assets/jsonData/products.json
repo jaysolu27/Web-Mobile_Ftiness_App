@@ -2,100 +2,140 @@
     {
         "productId": "YM1",
         "productName": "Yoga Mat",
-        "productDescription": "Yoga Mat - Size: 68inch x 24inch x 1/4 inch.",
+        "productSpecification": "Yoga Mat - Size: 68inch x 24inch x 1/4 inch.",
+        "prodDescription":"Yoga mats are a must for any gymgoer or yoga enthusiast! This is a vital tool to get the best out of your workout. Our yoga mats create a comfortable barrier between the user and the floor below, taking away any pressure that could otherwise be felt from exercising solely on the ground.These mats can be used for exercises apart from yoga also! They are great for Pilates, as well as stretching and mobility too. This mat can also be used for push ups, planks and other strength exercises! The best product for any workout!",
         "price": "€20.00",
         "color": "Blue",
         "brand": "STRAUSS",
         "productWeight": "840 Grams",
-        "images": ["../../assets/yoga_mat/ym.jpg", "../../assets/yoga_mat/ym1.jpg",
-        "../../assets/yoga_mat/ym2.jpg"],
+        "images": [
+            "../../assets/yoga_mat/ym.jpg",
+            "../../assets/yoga_mat/ym1.jpg",
+            "../../assets/yoga_mat/ym2.jpg"
+        ],
         "video": "../../assets/yoga_mat/ymVideo.mp4"
     },
     {
         "productId": "BB2",
         "productName": "Barbell",
-        "productDescription": "LxWxH 125 x 5 x 5 Centimeters",
+        "productSpecification": "Length: 7ft, Diameter: 28mm",
+        "prodDescription":"Top-quality Olympic Bar made from high carbon steel.This 7ft Olympic Barbell is a must have for anyone serious about their strength training. 28mm in diameter and is for use with 2 in Olympic plates only. It is perfect for squats, deadlifts, overhead presses, bent over rows with or without plates. The stylish black oxide finish means it is more durable and long lasting than traditional chrome barbells. Weight plates will slide on easily for fast loading. The barbell handles are knurled to ensure maximum grip during workouts. The bar is 20kg in weight and can hold weight of up to 600kg",
         "price": "€30.00",
         "brand": "Konark",
         "productWeight": "5KG",
-        "images": ["../../assets/barbell/bb1.jpg","../../assets/barbell/bb.jpg","../../assets/barbell/bb2.jpg",
-        "../../assets/barbell/bb3.jpg"],
+        "images": [
+            "../../assets/barbell/bb1.jpg",
+            "../../assets/barbell/bb.jpg",
+            "../../assets/barbell/bb2.jpg",
+            "../../assets/barbell/bb3.jpg"
+        ],
         "video": "../../assets/barbell/bbVideo.mp4"
     },
     {
         "productId": "DB3",
         "productName": "Dumbell",
-        "productDescription": "31.5L x 13.7W Centimeters",
+        "productSpecification": "31.5L x 13.7W Centimeters",
+        "prodDescription": "Dumbbells come equipped with a chrome plated dumbbell handle which is designed to provide the user with a firm and comfortable grip. The highly durable rubber dumbbell coating reduces the noise produced from dropping dumbbells on gym floors whilst also protecting the dumbbell from damage and protecting flooring Robust and durable hex dumbbell head. Available in a range of weights from 5.0kg to 30kg.",
         "price": "€10.00",
         "color": "Black",
         "brand": "Amazon Basics",
         "productWeight": "10260 Grams",
-        "images": ["../../assets/dumbell/db.jpg","../../assets/dumbell/db1.jpg",
-        "../../assets/dumbell/db2.jpg"],
+        "images": [
+            "../../assets/dumbell/db.jpg",
+            "../../assets/dumbell/db1.jpg",
+            "../../assets/dumbell/db2.jpg"
+        ],
         "video": "../../assets/dumbell/dbVideo.mp4"
     },
     {
         "productId": "GB4",
         "productName": "Gym Bag",
         "productDescription": "10 x 8 x 5 cm",
+        "prodDescription": "Made of Polyester 600d heavy duty material, Uzman Duffel bag is perfect for any activity and it also serves as a travel-bag. The lightweight and modern holdall gym bags are ideal for every sport and activity.These Compressible gym and Sport Bags come with a separate shoe compartment and a padded shoulder pad which makes it very comfortable to carry. The shoulder strap is detachable and adjustable.",
         "price": "€10.00",
         "color": "Black",
         "brand": "GMBG",
         "productWeight": "150 Grams",
-        "images": ["../../assets/gym_bag/gym_bag.jpg", "../../assets/gym_bag/gym_bag1.jpg",
-        "../../assets/gym_bag/gym_bag2.jpg", "../../assets/gym_bag/gym_bag3.jpg"]
+        "images": [
+            "../../assets/gym_bag/gym_bag.jpg",
+            "../../assets/gym_bag/gym_bag1.jpg",
+            "../../assets/gym_bag/gym_bag2.jpg",
+            "../../assets/gym_bag/gym_bag3.jpg"
+        ]
     },
     {
         "productId": "KB5",
         "productName": "Kettle bell",
-        "productDescription": "German Designed Adjustable Weights 5 lbs to 20 lbs, For Men & Women, 20 lbs - Black & Orange LxWxH    23 x 20.6 x 29 Centimeters",
+        "productSpecification": "German Designed Adjustable Weights 5 lbs to 20 lbs, For Men & Women, 20 lbs - Black & Orange LxWxH    23 x 20.6 x 29 Centimeters",
+        "prodDescription": "1 X Kettlebell with multiple plates made out of cast iron. It comes with an ergonomic handle and a weight selection dial to choose your desired weight level just like an adjustable dumbbell. The Flexikettle is available in 2 sizes - 20lb (9kg) and 40lb (18kg), for the 20lb variant, weights adjust from 5 to 20 lbs in 2.5 lbs increments. Replaces 7 sets of kettlebells - this modular design allows us to pack 7 different weights into - one flexikettle. Material: Metal; Color: Black & Orange; Size: 20 lbs; Item Length: 23 cm, Item Width: 20.6 cm, Item Height: 29 cm and Item Weight: 20 lbs. Versatility at its best!",
         "price": "€40.00",
         "brand": "Flexnest",
         "productWeight": "9 Kilograms",
-        "images": ["../../assets/kettle_bell/kb1.jpg","../../assets/kettle_bell/kb2.jpg",
-        "../../assets/kettle_bell/kb3.jpg", "../../assets/kettle_bell/kb4.jpg"],
+        "images": [
+            "../../assets/kettle_bell/kb1.jpg",
+            "../../assets/kettle_bell/kb2.jpg",
+            "../../assets/kettle_bell/kb3.jpg",
+            "../../assets/kettle_bell/kb4.jpg"
+        ],
         "video": "../../assets/kettle_bell/kbVideo.mp4"
     },
     {
         "productId": "RB6",
         "productName": "Resistance Band",
-        "productDescription": "5 different colored bands - Yellow, Blue, Red, Green and Black band; use them alone or combine any of them to increase intensity; combined maximum resistance of 100 lbs.",
+        "productSpecification": "5 different colored bands - Yellow, Blue, Red, Green and Black band; use them alone or combine any of them to increase intensity; combined maximum resistance of 100 lbs.",
+        "prodDescription": "The resistance bands set includes five exercise bands, one door anchor, two cushioned handles, strength training Exercise Resistance Bands bring you the same benefits of an expensive gym in a convenient and affordable home workout equipment set that lets you target your whole body. Our premium workout bands are made of the highest quality, using 100% Natural Latex with high elasticity and extra thick high-grade silicon, natural latex is kind to the environment. Strong wear resistance and perfect elasticity, steel metal buckle for stronger strength, non-slip handle, comfortable and absorbent.The resistance bands set includes five exercise bands, one door anchor, two cushioned handles and also a convenient travel pouch.",
         "price": "€45.00",
         "brand": "Fashnex",
         "productWeight": "100 lbs",
-        "images": ["../../assets/resistance_band/RB1.jpg","../../assets/resistance_band/RB2.jpg",
-        "../../assets/resistance_band/RB3.jpg", "../../assets/resistance_band/RB4.jpg"],
+        "images": [
+            "../../assets/resistance_band/RB1.jpg",
+            "../../assets/resistance_band/RB2.jpg",
+            "../../assets/resistance_band/RB3.jpg",
+            "../../assets/resistance_band/RB4.jpg"
+        ],
         "video": "../../assets/resistance_band/RBVideo.mp4"
     },
     {
         "productId": "RO7",
         "productName": "Rope",
-        "productDescription": "1.5 INCH Thick/Small Length 20 Feet",
+        "productSpecification": "1.5 INCH Thick/Small Length 20 Feet",
+        "prodDescription": "Hit Fitness Battle Ropes help build both stamina and strength simultaneously and was voted the best cardio workout by Men's Health Magazine. You can use this exercise as a main workout or for a finisher to top off your workout. Also called slam ropes, these ropes combine high-intensity work with strength and help you work multiple muscle groups at once. These ropes are made of highly durable material to withstand the punishment of your workouts.\n Exercises include: \nStandard Wave Slams, Lateral Whip, Jumping Slam and Plank Wave.",
         "price": "€60.00",
         "color": "Black",
         "brand": "ESSKAY UTTAM",
         "productWeight": "4 Kilograms",
-        "images": ["../../assets/rope/rope1.jpg","../../assets/rope/rope2.jpg"],
+        "images": [
+            "../../assets/rope/rope1.jpg",
+            "../../assets/rope/rope2.jpg"
+        ],
         "video": "../../assets/rope/ropeVideo.mp4"
     },
     {
         "productId": "WP8",
         "productName": "Weight Plates",
-        "productDescription": "LxWxH 25.4 x 12.7 x 7.6 Centimeters",
+        "productSpecification": "LxWxH 25.4 x 12.7 x 7.6 Centimeters",
+        "prodDescription":"York Fitness Standard Cast Iron Weight Plates are designed to fit all standard 1 inch diameter bars. Made from steel and finished in black these hard wearing, durable weights proudly show the YORK brand name. The York Fitness Standard Weight Plates are perfect for increasing the workout load of your equipment. They can be added to all 1-inch dumbbell bars and barbells along with being used for plate loading appropriate equipment. A reliable set of quality weight plates is fundamental for compound exercises such as squats, deadlifts, bicep curls, military press, skull-crushers and bench presses.",
         "price": "€20.00",
         "color": "Black",
-        "brand": "FitBox Sports",
+        "brand": "York",
         "productWeight": "20000 Grams",
-        "images": ["../../assets/weight_plates/wp1.jpg", "../../assets/weight_plates/wp2.jpg"]
+        "images": [
+            "../../assets/weight_plates/wp1.jpg",
+            "../../assets/weight_plates/wp2.jpg"
+        ]
     },
     {
         "productId": "BB9",
         "productName": "Bottle",
-        "productDescription": "LxWxH 25.4 x 12.7 x 7.6 Centimeters",
+        "productSpecification": "LxWxH 25.4 x 12.7 x 7.6 Centimeters",
+        "prodDescription": "Latest and Stylish Fridge Water Bottle With Handle for Men Women Girls Boys Kids.Best Suitable for Protein shaker mixer use , Powder Supliments , Milk , Coffee , Milkshake Combo , Blender shakes , Refrigerator , Gift.Ultra tight screw, lockable flip top stays open if needed with Perfect Grip with perfect drinking water Flow Matte Finish Body.Our Fancy design let you open the lid with a simple push . one hand Operation Fit . Made In India Metal Storage Container. Fits bag, bottles stand holder, cycle carrier.",
         "price": "€10.00",
         "color": "Black",
         "brand": "Fashnex",
         "productWeight": "200 Grams",
-        "images": ["../../assets/bottle/bottle1.webp", "../../assets/bottle/bottle2.webp"]
+        "images": [
+            "../../assets/bottle/bottle1.webp",
+            "../../assets/bottle/bottle2.webp"
+        ]
     }
 ]

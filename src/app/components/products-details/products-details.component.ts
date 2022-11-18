@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { IProduct } from 'src/app/constants';
 
@@ -12,6 +12,8 @@ export class ProductsDetailsComponent implements OnInit {
   showModal: boolean = false;
   productSpaceLargeData;
   prodVideoLargeData;
+
+  @ViewChild('prodVideo',{ static: true }) prodVideo: ElementRef; 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -20,10 +22,13 @@ export class ProductsDetailsComponent implements OnInit {
   }
 
   changeImage(img){
+    this.prodVideoLargeData = '';
+    this.prodVideo.nativeElement.pause();
     this.productSpaceLargeData = img;
   }
 
   changeVideo(video){
+    this.productSpaceLargeData = '';
     this.prodVideoLargeData = video;
   }
   

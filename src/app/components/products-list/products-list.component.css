@@ -1,10 +1,10 @@
-.product-wrap {
+/* .product-wrap {
     margin-top: -30px;
     background-image: linear-gradient(to left, #070e16, #e6e8e6);
-}
+} */
 
 .top {
-    margin-top: 90px;
+    margin-top: 40px;
     font-size: 3em;
     font-weight: bold;
     text-align: center;
@@ -22,8 +22,9 @@
 .product-card {
     transition: .3s;
     background: #fff;
-    background: gray;
-    border-radius: 10px;
+    background: #2d2a30;
+    border: 1px solid gray;
+    border-radius: 4px;
     box-shadow: inset 0 -3em 3em rgb(0 0 0 / 10%), 0px 0 0 0 #b7b7b74a, 0.01em 0.01em 0.5em rgb(0 0 0 / 30%);
 }
 
@@ -39,7 +40,7 @@
 img {
     width: 100%;
     height: 300px;
-    border-radius: 10px;
+    border-radius: 4px;
 }
 
 .social {

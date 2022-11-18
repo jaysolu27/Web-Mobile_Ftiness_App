@@ -3,21 +3,32 @@
     top: 0;
     left: 0;
     right: 0;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    background-color: #070e16;
+    height: 40px;
+    /* width: 100%; */
+    color: aliceblue;
+    padding: 10px 20px;
+    z-index: 1;
+}
+.header-conatiner{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: #070e16;
-    height: 40px;
-    width: 100%;
-    color: aliceblue;
-    padding: 10px 20px;
-    
 }
-.logo-name{
-    top: -28px;
+.logo-name {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+    display: inline-block;
+    top: -22px;
     left: 13px;
     position: relative;
-    font-size: xx-large;
+} 
+.logo-name span {
+    color: #e0ac1c;
 }
 .header-logo {
     width: 74px;
@@ -68,20 +79,33 @@
 ul {
     list-style-type: none;
 }
-
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #070e16;
+    height: 30px;
+    width: 100%;
+    color: aliceblue;
+    padding: 10px 20px;
+}
 /* Responsive layout - makes a one column layout instead of a two-column layout */
 @media (max-width: 800px) {
-    .header-wrapper {
+    /* .header-wrapper {
         margin-left: 20vw;
-    }
+    } */
 
     .nav-menu {
         display: none;
     }
-
+/* 
     .nav-sidebar {
         display: block;
-    }
+    } */
 
     .wrapper .sidebar {
         background: rgb(5, 68, 104);

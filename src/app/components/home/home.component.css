@@ -17,6 +17,7 @@
     position: absolute;
     top: 30%;
     left: 30%;
+    cursor: pointer;
 }
 
 .home-content-text{
