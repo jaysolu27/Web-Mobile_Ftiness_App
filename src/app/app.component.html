@@ -1,7 +1,8 @@
-<header class="header-wrapper">
+<div [ngClass]="{'main-wrapper':showHide}">
+<header class="header-wrapper" [ngClass]="{'main-wrapper':showHide}">
   <div class="header-conatiner">
   <div class="nav-logo">
-    <!-- <button (click)="!showHide">menu</button> -->
+    <button class="ham-burger-menu" (click)="sidebarDisplay()"><i class="fa fa-bars"></i></button>
     <div><img class="header-logo" src="../assets/logo/header-logo.png"/>
     <!-- <span class="logo-name">Fitness Club</span> -->
     <h3 class="logo-name">Fitness<span>Club</span></h3>
@@ -17,30 +18,23 @@
       <li><a href="#home" class="header-item">CONTACT US</a></li>&nbsp;
     </ul>
   </nav>
-
-  <div class="nav-sidebar" *ngIf="showHide">
-
-    <nav class="wrapper">
-      <!--Top menu -->
-      <ul class="sidebar">
-        <li><a routerLink="/home" routerLinkActive="active" class="header-item">HOME</a></li>
-        &nbsp;
-        <li><a routerLink="/home" class="header-item" *ngIf="_loc.path()!=='/home' && _loc.path()!=='/products'">PRODUCTS</a></li>&nbsp;
-        <li><a href="#home" class="sidebar-item">ABOUT US</a></li> &nbsp;
-        <li><a href="#home" class="sidebar-item">CONTACT US</a></li>&nbsp;
-      </ul>
-    </nav>
-
-  </div>
-  <!-- <div class="nav-search">
-    <form class="search-form" action="action_page.php">
-      <input type="text" class="search-field" placeholder="Search..." name="search" [(ngModel)]="productInput"/>
-      <button type="submit" class="search-btn" (click)="searchProduct()"><i class="fa fa-search"></i></button>
-    </form>
-  </div> -->
   </div>
 </header>
 <div #mainConatainer>
 <router-outlet></router-outlet>
 </div>
 <app-footer></app-footer>
+</div>
+<div class="nav-sidebar" *ngIf="showHide">
+
+  <nav class="wrapper">
+    <!--Top menu -->
+    <ul class="sidebar">
+      <li><a routerLink="/home" (click)="sidebarDisplay()" routerLinkActive="active" class="header-item">HOME</a></li>
+      <li *ngIf="_loc.path()!=='/home' && _loc.path()!=='/products'">
+        <a (click)="sidebarDisplay()" routerLink="/home" class="header-item">PRODUCTS</a></li>
+      <li><a (click)="sidebarDisplay()" href="#home" class="header-item">ABOUT US</a></li>
+      <li><a (click)="sidebarDisplay()" href="#home" class="header-item">CONTACT US</a></li>
+    </ul>
+  </nav>
+</div>  

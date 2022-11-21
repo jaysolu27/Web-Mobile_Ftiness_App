@@ -11,8 +11,8 @@ export class AppService {
   public productList = new BehaviorSubject<any>(null);
   castUser = this.productList.asObservable();
   
-  updateProductList(newUser){
-    this.productList.next(newUser); 
+  updateProductList(prodcut){
+    this.productList.next(prodcut); 
   }
   
   constructor(private http: HttpClient) { 
@@ -20,9 +20,7 @@ export class AppService {
       this.productList.next(products);
     });
   }
- 
-
-  
+   
 getProductList(){
   return this.productList.asObservable();
 }

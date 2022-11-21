@@ -13,14 +13,10 @@ export class AppComponent {
   title = 'fitnessClubApp';
   products: IProduct[];
   productInput: string;
-  constructor(private appService: AppService, public _loc: Location){
-    this.appService.castUser.subscribe(data => {
-      this.products = data;
-    });
-  }
-  searchProduct(){
-    var serchedItem = this.products.find(item=>item.productName.toLowerCase() === this.productInput.toLowerCase())
-    this.appService.productList.next(serchedItem)
-  }
-  
+  showHide = false;
+  constructor( public _loc: Location){
+    }
+    sidebarDisplay(){
+      this.showHide = !this.showHide;
+    } 
 }

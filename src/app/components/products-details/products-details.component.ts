@@ -12,6 +12,7 @@ export class ProductsDetailsComponent implements OnInit {
   productDetails: IProduct[];
   showModal: boolean = false;
   showForm: boolean = true;
+  stars: number[] = [1, 2, 3, 4, 5];
   productSpaceLargeData;
   prodVideoLargeData;
   reserveForm: FormGroup;
@@ -48,6 +49,7 @@ export class ProductsDetailsComponent implements OnInit {
   
   openModal(){
     this.showModal=!this.showModal;
+    this.reserveForm.reset();
   }
 
   onSubmit(){
@@ -55,6 +57,28 @@ export class ProductsDetailsComponent implements OnInit {
     setTimeout(()=>{                          
       this.showModal = false;
       this.router.navigate(['./home']);
+      this.reserveForm.reset();
   }, 1500);
   }
+  getGreyStars(num) {  
+    var numberOfStars = Math.round(num);  
+    var restStars = 5 - numberOfStars;  
+    if (restStars > 0) {  
+        var data = new Array(restStars);  
+        for (var i = 0; i < data.length; i++) {  
+            data[i] = i;  
+        }  
+        return data;  
+    }  }
+
+    getYellowStars(num) {  
+      var numberOfStars = Math.round(num);  
+      if (numberOfStars > 5)  
+          numberOfStars = 5;  
+      var data = new Array(numberOfStars);  
+      for (var i = 0; i < data.length; i++) {  
+          data[i] = i;  
+      }  
+      return data;  
+  }  
 }

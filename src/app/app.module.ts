@@ -18,7 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
     AboutComponent,
     ProductsListComponent,
     ProductsDetailsComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

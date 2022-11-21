@@ -8,6 +8,7 @@
         "color": "Blue",
         "brand": "STRAUSS",
         "productWeight": "840 Grams",
+        "rating": 5,
         "images": [
             "../../assets/yoga_mat/ym.jpg",
             "../../assets/yoga_mat/ym1.jpg",
@@ -23,6 +24,7 @@
         "price": "€30.00",
         "brand": "Konark",
         "productWeight": "5KG",
+        "rating": 3.5,
         "images": [
             "../../assets/barbell/bb1.jpg",
             "../../assets/barbell/bb.jpg",
@@ -40,6 +42,7 @@
         "color": "Black",
         "brand": "Amazon Basics",
         "productWeight": "10260 Grams",
+        "rating": 4.5,
         "images": [
             "../../assets/dumbell/db.jpg",
             "../../assets/dumbell/db1.jpg",
@@ -56,6 +59,7 @@
         "color": "Black",
         "brand": "GMBG",
         "productWeight": "150 Grams",
+        "rating": 3,
         "images": [
             "../../assets/gym_bag/gym_bag.jpg",
             "../../assets/gym_bag/gym_bag1.jpg",
@@ -71,6 +75,7 @@
         "price": "€40.00",
         "brand": "Flexnest",
         "productWeight": "9 Kilograms",
+        "rating": 4,
         "images": [
             "../../assets/kettle_bell/kb1.jpg",
             "../../assets/kettle_bell/kb2.jpg",
@@ -87,6 +92,7 @@
         "price": "€45.00",
         "brand": "Fashnex",
         "productWeight": "100 lbs",
+        "rating": 3.9,
         "images": [
             "../../assets/resistance_band/RB1.jpg",
             "../../assets/resistance_band/RB2.jpg",
@@ -104,6 +110,7 @@
         "color": "Black",
         "brand": "ESSKAY UTTAM",
         "productWeight": "4 Kilograms",
+        "rating": 4,
         "images": [
             "../../assets/rope/rope1.jpg",
             "../../assets/rope/rope2.jpg"
@@ -119,6 +126,7 @@
         "color": "Black",
         "brand": "York",
         "productWeight": "20000 Grams",
+        "rating": 3.2,
         "images": [
             "../../assets/weight_plates/wp1.jpg",
             "../../assets/weight_plates/wp2.jpg"
@@ -132,6 +140,7 @@
         "price": "€10.00",
         "color": "Black",
         "brand": "Fashnex",
+        "rating": 5,
         "productWeight": "200 Grams",
         "images": [
             "../../assets/bottle/bottle1.webp",

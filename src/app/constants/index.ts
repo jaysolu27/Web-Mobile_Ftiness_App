@@ -13,4 +13,5 @@ export interface IProduct{
     image3 ?: string;
     image4 ?: string;
     video ?: string;
+    ratings?: number;
 }
