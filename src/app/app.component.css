@@ -1,0 +1,129 @@
+.header-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between; */
+    background-color: #070e16;
+    height: 40px;
+    /* width: 100%; */
+    color: aliceblue;
+    padding: 10px 20px;
+    z-index: 1;
+}
+.header-conatiner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.fa-bars{
+    font-size: 21px;
+    color: #fff;
+}
+.logo-name {
+    color: #ffffff;
+    font: normal 36px 'Cookie', cursive;
+    margin: 0;
+    display: inline-block;
+    top: -22px;
+    left: 13px;
+    position: relative;
+} 
+.nav-logo{
+    display: flex;
+    flex-direction: row;
+}
+.ham-burger-menu{
+    display: none;
+    width: 37px;
+    height: 36px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    margin: 2px;
+}
+.logo-name span {
+    color: #e0ac1c;
+}
+.header-logo {
+    width: 74px;
+    height: 70px;
+    margin-top: -10px;
+}
+
+/* .nav-sidebar {
+    display: none;
+} */
+
+.header-item {
+    padding: 10px 10px 0 0;
+    color: antiquewhite !important;
+    text-decoration: none !important;
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    justify-content: flex-start;
+    align-items: initial;
+}
+
+ul {
+    list-style-type: none;
+}
+.footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #070e16;
+    height: 30px;
+    width: 100%;
+    color: aliceblue;
+    padding: 10px 20px;
+}
+.wrapper .sidebar {
+    background: rgb(5, 68, 104);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+/* .main-wrapper {
+    margin-left: 20vw;
+} */
+/* Responsive layout */
+@media (max-width: 800px) {
+    
+    .nav-menu {
+        display: none;
+    }
+    .ham-burger-menu{
+        display: block;
+    }
+
+    .wrapper .sidebar {
+        background: #070e16;
+        position: fixed;
+        top: 43px;
+        left: 0;
+        width: 40vw;
+        height: 100%;
+        padding: 20px 20px;
+        transition: all 0.5s ease;
+        color: #ffffff;
+    }
+
+    .nav-sidebar li{
+        padding-bottom: 20px;
+    }
+}

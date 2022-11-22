@@ -1,0 +1,130 @@
+<div class="prod-detainls-wrapper">
+    <div class="prod-container" *ngFor="let product of productDetails; let i=index">
+        <div class="prod-left-display">
+            <div class="prod-image-container">
+                <div class="prod-large-img-container">
+                    <img *ngIf="!prodVideoLargeData" class="prod-large-img product-main-img"
+                        [src]="productSpaceLargeData ? productSpaceLargeData : product.images[0]">
+                    <video autoplay preload='metadata' class="prod-large-video" *ngIf="prodVideoLargeData">
+                        <source src={{product.video}}>
+                    </video>
+                </div>
+                <div class="prod-small-images">
+                    <div *ngFor="let img of product.images;let i=index" (click)="changeImage(img)">
+                        <img src={{img}} class="prod-images prod-small-img">
+                    </div>
+                    <div *ngIf="product.video" (click)="changeImage(product.video)">
+                        <video controls="false" preload="auto" class="product-video" controls>
+                            <source src={{product.video}}>
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="prod-right-details">
+            <div class="prod-details-container">
+                <div class="prod-basics">
+                    <h2> {{product.productName}} </h2>
+                    <span class="prod-descrip"> {{product.prodDescription}} </span>
+                    <h3>Product Specification</h3>
+                    <span class="prod-descrip"> {{product.productSpecification}} </span>
+                    <h3>Product Details</h3>
+                    <ul>
+                        <li *ngIf="product?.colour">Colour: {{product?.colour}}</li>
+                        <li *ngIf="product?.brand">Brand: {{product?.brand}}</li>
+                        <li *ngIf="product?.productWeight">Item Weight: {{product?.productWeight}}</li>
+                    </ul>
+                    <h3>Ratings</h3><div class="rating-container">
+                    <i class="fa fa-star" style="color:#e0ac1c;"
+                        *ngFor="let t of getYellowStars(product.rating)"></i>
+                    <i class="fa fa-star" style="color:#878685;"
+                    *ngFor="let t of getGreyStars(product.rating)"></i></div><br>
+                    <!-- <div *ngFor="let item of stars">
+                        <i class="fa fa-star" [ngClass]="{'fa-star-half-o':productRatingsCount(product.rating)}"></i></div><br> -->
+                    <h4>Price: {{product.price}} </h4>
+                    <div><input type="number" value="1" min="1" class="product-count">
+                        <button class="add-cart-btn" (click)="openModal()">Reserve Item</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal" *ngIf="showModal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div *ngIf="showForm">
+            <div class="modal-header">
+                <h3 class="modal-title">Reserve Item</h3>
+                <a class="close" (click)="openModal()">&times;</a>
+            </div>
+            <form class="reserve-item-form" [formGroup]="reserveForm" (ngSubmit)="onSubmit()">
+                <div class="form-container">
+                    <div class="reserve-item-field">
+                        <label><strong>Fisrt Name <span class="reqClass"> *</span> :</strong></label><br>
+                        <input class="reserve-field" type="text" formControlName="firstName" name="firstName"
+                            placeholder="Enter First Name..." required>
+                        <span class="text-danger" *ngIf="(reserveFormControl.firstName.touched || reserveFormControl.firstName.submitted) 
+                            && reserveFormControl.firstName.errors?.required">
+                            First Name is required.
+                        </span>
+                    </div>
+                    <div class="reserve-item-field">
+                        <label><strong>Last Name <span class="reqClass"> *</span> :</strong></label><br>
+                        <input class="reserve-field" type="text" formControlName="lastName" name="lastName"
+                            placeholder="Enter Last Name..." required>
+                        <span class="text-danger" *ngIf="(reserveFormControl.lastName.touched || reserveFormControl.lastName.submitted)
+                             && reserveFormControl.lastName.errors?.required">
+                            Last Name is required.
+                        </span>
+                    </div>
+                    <div class="reserve-item-field">
+                        <label><strong>Email - ID <span class="reqClass"> *</span> :</strong></label><br>
+                        <input class="reserve-field" type="email" formControlName="email" name="usermail"
+                            placeholder="Enter email..." required>
+                        <span class="text-danger" *ngIf="(reserveFormControl.email.touched || reserveFormControl.email.submitted) 
+                            && reserveFormControl.email.errors?.required && !reserveFormControl.email.dirty">
+                            Email is required.
+                        </span>
+                        <span class="text-danger"
+                            *ngIf="(reserveFormControl.email.dirty && reserveFormControl.email.invalid)">
+                            Email is invalid.
+                        </span>
+                    </div>
+                    <div class="reserve-item-field">
+                        <label><strong>Mobile No <span class="reqClass"> *</span> :</strong></label><br>
+                        <input class="reserve-field" type="text" formControlName="mobileNo" name="usercontact"
+                            placeholder="Enter contact details ..." required>
+                        <span class="text-danger" *ngIf="(reserveFormControl.mobileNo.touched || reserveFormControl.email.submitted) 
+                            && reserveFormControl.mobileNo.errors?.required && !reserveFormControl.mobileNo.dirty">
+                            Mobile Number is required.
+                        </span>
+                        <span class="text-danger"
+                            *ngIf="(reserveFormControl.mobileNo.touched && reserveFormControl.mobileNo.invalid) && reserveFormControl.mobileNo.dirty">
+                            Mobile Number is invalid.
+                        </span>
+                    </div>
+                    <div class="reserve-item-field"><label><strong>Product Quantity:</strong></label>
+                        <input type="number" value="1" min="1" class="product-count">
+                    </div>
+                </div>
+                <br />
+                <br />
+                <div>
+                    <input class="submit-btn" type="submit" value="Reserve Now" [disabled]="reserveForm.invalid">
+                </div>
+            </form>
+        </div>
+        <div *ngIf="!showForm">
+            <div class="succ-message">
+                <i class="fa fa-check-square-o"></i><br>
+                <span>Item/s Reserved Successfully!!!{{reserveFormControl.email.submitted}}</span>
+            </div>
+        </div>
+    </div>
+
+</div>
