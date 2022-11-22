@@ -255,12 +255,13 @@ input[type="text"], input[type="email"] :focus-visible {
     display: flex;
     flex-direction: row;
 }
-
+.prod-large-video{
+    width: 500px !important;
+}
 @media only screen and (min-width: 391px) and (max-width: 840px) {
     .prod-left-display, .prod-right-details {
         flex: 100%;
     }
-
 }
 
 @media only screen and (max-width: 390px) {

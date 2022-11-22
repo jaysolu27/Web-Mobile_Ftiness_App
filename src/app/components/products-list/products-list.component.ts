@@ -36,4 +36,26 @@ export class ProductsListComponent implements OnInit {
    searchInput = searchInput.toLowerCase();
    this.products=this.products.filter(x =>x.productName.toLowerCase().includes(searchInput))
   };
+
+  getGreyStars(num) {  
+    var numberOfStars = Math.round(num);  
+    var restStars = 5 - numberOfStars;  
+    if (restStars > 0) {  
+        var data = new Array(restStars);  
+        for (var i = 0; i < data.length; i++) {  
+            data[i] = i;  
+        }  
+        return data;  
+    }  }
+
+    getYellowStars(num) {  
+      var numberOfStars = Math.round(num);  
+      if (numberOfStars > 5)  
+          numberOfStars = 5;  
+      var data = new Array(numberOfStars);  
+      for (var i = 0; i < data.length; i++) {  
+          data[i] = i;  
+      }  
+      return data;  
+  }  
 }

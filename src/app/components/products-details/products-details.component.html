@@ -5,7 +5,7 @@
                 <div class="prod-large-img-container">
                     <img *ngIf="!prodVideoLargeData" class="prod-large-img product-main-img"
                         [src]="productSpaceLargeData ? productSpaceLargeData : product.images[0]">
-                    <video autoplay preload='metadata' *ngIf="prodVideoLargeData">
+                    <video autoplay preload='metadata' class="prod-large-video" *ngIf="prodVideoLargeData">
                         <source src={{product.video}}>
                     </video>
                 </div>
@@ -13,8 +13,8 @@
                     <div *ngFor="let img of product.images;let i=index" (click)="changeImage(img)">
                         <img src={{img}} class="prod-images prod-small-img">
                     </div>
-                    <div *ngIf="product.video" (click)="changeVideo(product.video)">
-                        <video #prodVideo controls="false" preload="auto" class="product-video" controls>
+                    <div *ngIf="product.video" (click)="changeImage(product.video)">
+                        <video controls="false" preload="auto" class="product-video" controls>
                             <source src={{product.video}}>
                         </video>
                     </div>

@@ -36,14 +36,18 @@ export class ProductsDetailsComponent implements OnInit {
   get reserveFormControl() {
     return this.reserveForm.controls;
   }
-  changeImage(img){
+  changeImage(data){
+    this.productSpaceLargeData = '';
     this.prodVideoLargeData = '';
-    this.prodVideo.nativeElement.pause();
-    this.productSpaceLargeData = img;
+    if(data.split('.')[data.split('.').length-1] !== 'jpg'){
+      this.prodVideoLargeData = data;
+    }else{
+      this.productSpaceLargeData = data;
+    }
   }
 
   changeVideo(video){
-    this.productSpaceLargeData = '';
+   // this.productSpaceLargeData = '';
     this.prodVideoLargeData = video;
   }
   

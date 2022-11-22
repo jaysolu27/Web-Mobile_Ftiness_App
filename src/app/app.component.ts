@@ -14,9 +14,13 @@ export class AppComponent {
   products: IProduct[];
   productInput: string;
   showHide = false;
-  constructor( public _loc: Location){
+  constructor( public _loc: Location, private route: Router){
     }
     sidebarDisplay(){
       this.showHide = !this.showHide;
     } 
+
+    public navigateToHome(product) {
+      this.route.navigate(['./home']);
+    }
 }

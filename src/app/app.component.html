@@ -1,7 +1,7 @@
 <div [ngClass]="{'main-wrapper':showHide}">
 <header class="header-wrapper" [ngClass]="{'main-wrapper':showHide}">
   <div class="header-conatiner">
-  <div class="nav-logo">
+  <div class="nav-logo" (click)="navigateToHome()">
     <button class="ham-burger-menu" (click)="sidebarDisplay()"><i class="fa fa-bars"></i></button>
     <div><img class="header-logo" src="../assets/logo/header-logo.png"/>
     <!-- <span class="logo-name">Fitness Club</span> -->
