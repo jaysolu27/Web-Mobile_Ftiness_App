@@ -3,12 +3,8 @@
     top: 0;
     left: 0;
     right: 0;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */
     background-color: #070e16;
     height: 40px;
-    /* width: 100%; */
     color: aliceblue;
     padding: 10px 20px;
     z-index: 1;
@@ -53,10 +49,6 @@
     margin-top: -10px;
 }
 
-/* .nav-sidebar {
-    display: none;
-} */
-
 .header-item {
     padding: 10px 10px 0 0;
     color: antiquewhite !important;
@@ -98,9 +90,6 @@ ul {
     padding: 20px 0;
     transition: all 0.5s ease;
 }
-/* .main-wrapper {
-    margin-left: 20vw;
-} */
 /* Responsive layout */
 @media (max-width: 800px) {
     

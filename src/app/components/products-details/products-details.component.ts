@@ -48,11 +48,6 @@ export class ProductsDetailsComponent implements OnInit {
       this.productSpaceLargeData = data;
     }
   }
-
-  changeVideo(video){
-   // this.productSpaceLargeData = '';
-    this.prodVideoLargeData = video;
-  }
   
   openModal(){
     this.showModal=!this.showModal;
