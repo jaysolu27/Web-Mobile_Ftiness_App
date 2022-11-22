@@ -26,7 +26,7 @@ export class ProductsListComponent implements OnInit {
   }
 
   public navigateToDetails(product) {
-    this.route.navigate(['./product-details', product.productId, {productData: JSON.stringify(product)} ]);
+    this.route.navigate(['./product-details', product.productId ]);
   }
 
   public productInputChange(searchInput){

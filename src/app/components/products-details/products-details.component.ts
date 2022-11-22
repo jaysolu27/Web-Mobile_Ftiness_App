@@ -2,6 +2,7 @@ import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from 'src/app/constants';
+import { AppService } from 'src/app/services/app.service';
 
 @Component({
   selector: 'app-products-details',
@@ -19,18 +20,20 @@ export class ProductsDetailsComponent implements OnInit {
   submitted = false;
   @ViewChild('prodVideo',{ static: true }) prodVideo: ElementRef; 
 
-  constructor(private route: ActivatedRoute, private fb: FormBuilder, private router: Router) { }
+  constructor(private route: ActivatedRoute, private fb: FormBuilder,
+     private router: Router, private appService: AppService) { }
 
   ngOnInit() {
     this.productDetails = [];
-    this.productDetails.push(JSON.parse(this.route.snapshot.params.productData));
     this.reserveForm = this.fb.group({
       firstName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email,Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')]],
       lastName: ['', [Validators.required]],
       mobileNo: ['', [Validators.required, Validators.pattern("[0-9 ]{10}")]],
       });
-
+      this.appService.getProductList().subscribe(productData=>{
+        this.productDetails = productData.filter(item=>item.productId === this.route.snapshot.params.id);
+      });
   }
 
   get reserveFormControl() {
