@@ -246,7 +246,9 @@ input[type="text"], input[type="email"] :focus-visible {
     flex-direction: row;
 }
 .prod-large-video{
-    width: 500px !important;
+    width: 450px !important;
+    height: 300px !important;
+
 }
 @media only screen and (min-width: 391px) and (max-width: 840px) {
     .prod-left-display, .prod-right-details {
