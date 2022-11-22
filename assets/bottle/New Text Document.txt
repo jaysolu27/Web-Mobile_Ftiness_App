@@ -1,5 +1,0 @@
-bottle 1   https://cdn.shopify.com/s/files/1/0477/1358/3267/products/IMG_8452.jpg?v=1638824205
-
-bottle 2 https://cdn.shopify.com/s/files/1/0477/1358/3267/products/FLexbottlesq_1080x.png?v=1638824205
-
-
